@@ -11,6 +11,8 @@ using System.Windows.Forms;
 namespace CashCheck
 {
     public partial class Form1 : Form
+
+    //test Comment for check how git is working in visual Studio
     {
         // Fields in the Form
         Guy joe;
