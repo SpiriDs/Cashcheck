@@ -66,5 +66,19 @@ namespace CashCheck
             bank += bob.GiveCash(5);
             UpdateForm();
         }
+
+        private void joeGivesToBob_Click(object sender, EventArgs e)
+        {
+            joe.Cash -= joe.GiveCash(10);
+            bob.Cash += bob.ReceiveCash(10);
+            UpdateForm();
+        }
+
+        private void bobGivesToJoe_Click(object sender, EventArgs e)
+        {
+            joe.Cash += joe.ReceiveCash(5);
+            bob.Cash -= bob.GiveCash(5);
+            UpdateForm();
+        }
     }
 }
