@@ -69,15 +69,30 @@ namespace CashCheck
 
         private void joeGivesToBob_Click(object sender, EventArgs e)
         {
-            joe.Cash -= joe.GiveCash(10);
-            bob.Cash += bob.ReceiveCash(10);
+            //joe.Cash -= joe.GiveCash(10);
+            //bob.Cash += bob.ReceiveCash(10);
+
+            //other better way to asign the action
+            //bob.ReceiveCash(10);
+            //joe.GiveCash(10);
+
+            //More short, ...less lines
+            bob.ReceiveCash(joe.GiveCash(10));
             UpdateForm();
         }
 
         private void bobGivesToJoe_Click(object sender, EventArgs e)
         {
-            joe.Cash += joe.ReceiveCash(5);
-            bob.Cash -= bob.GiveCash(5);
+            //joe.Cash += joe.ReceiveCash(5);
+            //bob.Cash -= bob.GiveCash(5);
+
+            //other better way to asign the action
+            //joe.ReceiveCash(5);
+            //joe.GiveCash(5);
+
+            //More short, ...less lines
+            joe.ReceiveCash(bob.GiveCash(5));
+
             UpdateForm();
         }
     }
